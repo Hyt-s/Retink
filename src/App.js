@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Switch, Route } from "react-router";
+import { Switch, Route, Redirect } from "react-router";
 import { useHistory } from "react-router-dom";
 import "./App.css";
 import MainPage from "./components/Pages/MainPage";
@@ -29,6 +29,10 @@ function App() {
     if (storedUserLoggedInInformation === "1") {
       setIsLoggedIn(true);
     }
+
+    window.onload = (event) => {
+      <Redirect to="/" />;
+    };
   }, []);
 
   const loginHandler = (email, password) => {
