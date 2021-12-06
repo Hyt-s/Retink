@@ -1,0 +1,140 @@
+.backgroundContainer {
+  background-image: url(../../assets/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mainPage {
+  max-width: 1440px;
+  padding: 50px 10px;
+}
+
+/* Card */
+
+.mainHeading {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 45px;
+  line-height: 50px;
+  color: #ffffff;
+  align-items: left;
+}
+
+/* Captions classes */
+
+.caption {
+  margin: 50px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  align-items: center;
+  font-family: Open Sans;
+  position: relative;
+  left: 70px;
+  bottom: 20px;
+  box-shadow: 0px 15px 35px rgba(50, 50, 93, 0.1),
+    0px 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.captionWeight {
+  font-weight: 600;
+}
+
+.upperCaption:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid white;
+  border-right: 15px solid transparent;
+  border-top: 15px solid white;
+  border-bottom: 15px solid transparent;
+  left: 0px;
+  bottom: -19px;
+}
+
+.lowerCaption:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid white;
+  border-top: 15px solid white;
+  border-bottom: 15px solid transparent;
+  left: 0%;
+  right: 0%;
+  top: -28.59%;
+  bottom: 0%;
+  transform: rotate(-180deg);
+}
+
+.character {
+  position: relative;
+  left: 80px;
+  top: 85px;
+}
+
+.mover {
+  -webkit-animation: mover 10s infinite alternate;
+  animation: mover 10s infinite alternate
+}
+
+@-webkit-keyframes mover {
+  0% {
+      transform: translateY(-20px)
+  }
+
+  to {
+      transform: translateY(100px)
+  }
+}
+
+@keyframes mover {
+  0% {
+      transform: translateY(-20px)
+  }
+
+  to {
+      transform: translateY(100px)
+  }
+}
+
+@media (min-width: 768px) {
+  .mainHeading {
+    line-height: 40px;
+  }
+  .caption {
+    font-size: 16px;
+    line-height: 27px;
+    left: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainHeading {
+    line-height: 40px;
+  }
+
+  .caption {
+    font-size: 16px;
+    line-height: 27px;
+    left: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mainHeading {
+    line-height: 40px;
+  }
+
+  .caption {
+    font-size: 16px;
+    line-height: 27px;
+    left: -20px;
+  }
+}
